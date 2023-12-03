@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <meta name="description" content="ポートフォリオサイト">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo">
+                <a href="index.html"><img src="image/logo_other.png" alt="ロゴ"></a>
+            </h1>
+
+            <nav class="pc-nav">
+                <ul>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-other contact-page">
+
+        <h2>CONTACT</h2>
+        <p class="leaf-contact">
+            <img src="image/illust_leaf.png" alt="葉っぱのイラスト">
+        </p>
+
+        <p class="contact-top">ご依頼・お問い合わせはこちらからお願いします。<br>
+            「まだイメージがまとまっていないけど・・・」「こんなことできますか？」などご相談からでも構いません。<br>
+            お気軽にお問い合わせください。
+        </p>
+
+        <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdtF-2rOdtSVjKxeBUot_MhGz7LC1pSQZyQ4zNNEye_DhljZQ/formResponse"
+            method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <div>
+                <p class="input-label">
+                    <label for="name">NAME | お名前</label>
+                </p>
+                <div class="input-field">
+                    <input type="text" name="entry.1570990299">
+                </div>
+            </div>
+
+            <div>
+                <p class="input-label">
+                    <label for="">PHONE | 電話番号</label>
+                </p>
+                <p class="input-field">
+                    <input type="tel" name="entry.160239255">
+                </p>
+            </div>
+
+            <div>
+                <p class="input-label">
+                    <label for="">E-MAIL | メールアドレス</label>
+                </p>
+                <p class="input-field">
+                    <input type="email" name="entry.2118919136">
+                </p>
+            </div>
+
+            <div>
+                <p class="input-label">
+                    <label for="">MESSAGE | お問い合わせ内容</label>
+                </p>
+                <p class="input-field">
+                    <textarea name="entry.882416498" id="" cols="30" rows="10"></textarea>
+                </p>
+            </div>
+
+            <div class="submit-button">
+                <!-- <p> -->
+                <input class="button-navy" type="submit" value="SEND MESSAGE">
+                <!-- </p> -->
+            </div>
+
+
+            <div class="button-navy">
+                <a href="thanks.html">SEND MESSAGE</a>
+            </div>
+
+        </form>
+
+        <p>
+            <img class="tree" src="image/illust_tree.png" alt="木のイラスト">
+        </p>
+    </main>
+
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <p class="icon_instagram">
+            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+        </p>
+
+        <p class="copy">©︎ MOTAKE DESIGN</p>
+
+    </footer>
+
+    <script>
+        jQuery("#my-form").submit(function (event) {
+            event.preventDefault();
+
+            let baseUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdtF-2rOdtSVjKxeBUot_MhGz7LC1pSQZyQ4zNNEye_DhljZQ/formResponse";
+            let name = jQuery("[name=\"entry.1570990299\"]").val();
+            let tel = jQuery("[name=\"entry.160239255\"]").val();
+            let mail = jQuery("[name=\"entry.2118919136\"]").val();
+            let content = jQuery("[name=\"entry.882416498\"]").val();
+            // let radio = jQuery("[name=\"entry.xxxxxxxxx\"]:checked").val();
+            /* チェックボックスは数分だけ作る */
+            // let checks = ["", "", "", ""];
+            // let count = 0;
+            // jQuery("[name=\"entry.xxxxxxxxx\"]:checked").each(function () {
+            //     checks[count] = jQuery(this).val();
+            //     count++;
+            // });
+            // let select = jQuery("[name=\"entry.xxxxxxxxx\"]").val();
+
+            jQuery.ajax({
+                url: baseUrl,
+                data: {
+                    "entry.1570990299": name,
+                    "entry.160239255": tel,
+                    "entry.2118919136": mail,
+                    "entry.882416498": content,
+                    // "entry.xxxxxxxxx": radio,
+                    // "entry.xxxxxxxxx": checks[0],
+                    // "entry.xxxxxxxxx": checks[1],
+                    // "entry.xxxxxxxxx": checks[2],
+                    // "entry.xxxxxxxxx": checks[3],
+                    // "entry.xxxxxxxxx": select,
+                },
+                type: "POST",
+                dataType: "xml",
+            }).always((jqXHR, textStatus, errorThrown) => {
+                window.location.href = "thanks.html";
+            });
+            return false;
+        });
+
+
+    </script>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+
+</body>
+
+</html>

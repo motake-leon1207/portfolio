@@ -1,0 +1,1095 @@
+@charset "utf-8";
+
+/* -----------------共通設定----------------- */
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #032432;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+h2,
+h3,
+ul,
+li,
+a,
+.input-label {
+    font-family: "DIN 2014";
+}
+
+a:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+h2 {
+    font-size: 60px;
+    padding-top: 35px;
+    padding-bottom: 80PX;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /* 色を消す */
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+.main-index {
+    max-width: 1366px;
+    margin: 0 auto;
+
+}
+
+.main-works {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-other {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.step-other {
+    position: absolute;
+    top: -5px;
+    left: 65px;
+}
+
+.step-other img {
+    width: 350px;
+}
+
+body {
+    background: #b4c2c1;
+    margin: 0;
+}
+
+
+/* ボタン箇所 */
+.button-gray {
+    width: 140px;
+    border: solid 1px;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-gray:hover {
+    color: #032432;
+    background-color: #b4c2c1;
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.button-navy {
+    width: 140px;
+    border: solid 1px;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #b4c2c1;
+    background-color: #032432;
+}
+
+.button-navy:hover {
+    color: #032432;
+    background-color: #b4c2c1;
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* フッター箇所 */
+footer {
+    text-align:center;
+    background-color: #032432;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding-top: 85px;
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+footer ul li {
+    font-size: 20px;
+    width: 100px;
+    color: #b4c2c1;
+}
+
+footer p {
+    margin: 0;
+    color: #b4c2c1;
+}
+
+.icon_instagram {
+    width: 40px;
+    margin: 0 auto;
+}
+
+.copy {
+    font-size: 12px;
+    margin-top: 30px;
+    padding-bottom: 85px;
+}
+
+
+/* ==========スマホ用の要素を非表示にしておく========== */
+
+.hamburger,
+.sp-nav,
+.sp-visual,
+.sp-concept,
+.sp-service-menu-icon,
+.sp-about-photo {
+    display: none;
+}
+/* ============================================== */
+
+
+/* -----------------indexのページ----------------- */
+
+/* indexだけ背景色を変える */
+.body-index {
+    background: #032432;
+}
+
+/* ======ヘッダー箇所===== */
+.header-index {
+    position: relative;
+}
+
+.header-wrap {
+    display: flex;
+    /* 両端と均等配置 */
+    justify-content: space-between;
+    /* 垂直方向の中央揃え */
+    align-items: center;
+    width: 100%;
+}
+
+/* indexだけメインビジュアルに重ねる設定を加える */
+.header-wrap-index {
+    display: flex;
+    /* 両端と均等配置 */
+    justify-content: space-between;
+    /* 垂直方向の中央揃え */
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    width: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.pc-nav ul {
+    display: flex;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.pc-nav ul li {
+    font-size: 20px;
+    justify-content: space-between;
+    width: 100px;
+    text-align: center;
+}
+
+/* コンセプト箇所 */
+.concept {
+    text-align: center;
+    font-size: 20px;
+    color: #b4c2c1;
+    margin-bottom: 100px;
+}
+
+.concept p {
+    color: #b4c2c1;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+
+
+
+/* サービス箇所 */
+.service-back {
+    background: #b4c2c1;
+    width: 100%;
+    margin: 0 0 155px 13.4%;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    position: relative;
+}
+
+.service h2 {
+    padding-top: 140px;
+    margin-left: 125px;
+}
+
+.leaf {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+}
+
+.leaf img {
+    width: 350px;
+}
+
+.service-design {
+    display: flex;
+    padding-top: 40px;
+    padding-left: 22.3%;
+    padding-bottom: 100px;
+}
+
+.service-menu {
+    width: 475px;
+}
+
+.service-menu-top {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.service-menu-top ul {
+    display: flex;
+    justify-content: end;
+    font-size: 16px;
+}
+
+.service-menu-skill {
+    margin: auto 0 auto auto;
+}
+
+.service-menu-border {
+    border: solid #032432 1px;
+    width: 475px;
+}
+
+.service-menu-bottom {
+    padding: 20px 40px 0 40px;
+}
+
+.service-menu-bottom p {
+    line-height: 1.5;
+}
+
+.service-menu-icon {
+    width: 150px;
+    margin-left: 9.66%;
+}
+
+.service-menu-icon img {
+    margin-right: 13.4%;
+    /* padding-right: 13.4%; */
+}
+
+.service-cording {
+    display: flex;
+    padding-left: 22.3%;
+    padding-bottom: 75px;
+}
+
+.service li {
+    position: relative;
+    padding-left: 10px;
+    margin-left: 20px;
+}
+
+/* 三角のリストマーカー */
+.service li::before{
+    content:"";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #032432;
+    padding-left: 20px;
+}
+
+/* ワークス箇所 */
+.works-back {
+    background: #b4c2c1;
+    width: 86.6%;
+    margin-left: 0;
+    margin-right: 13.4%;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    position: relative;
+}
+
+.works h2 {
+    padding-top: 140px;
+    margin-left: 125px;
+}
+
+.step-index {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+}
+
+.step-index img {
+    width: 350px;
+}
+
+.works-wrap {
+    /* width: 900px;
+    margin-left: 183px; */
+    width: 76.0%;
+    margin-left: 15.5%;
+}
+
+.works-image {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 110px;
+}
+
+.works-image img {
+    width: 420px;
+}
+
+.works-image p {
+    margin: 0;
+}
+
+.works-index-left {
+    padding-right: 15px;
+}
+
+.works-in {
+    margin-left: 60px;
+}
+
+.deer {
+    position: absolute;
+    bottom: -25px;
+    right: 45px;
+    width: 100px;
+}
+
+.space {
+    padding-bottom: 140px;
+}
+
+
+
+
+
+
+
+/* -----------------WORKSのページ----------------- */
+
+.works-page h2 {
+    margin-left: 120px;
+}
+
+.works-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ホバー時に色をつけるために画像の裏に背景色を設定 */
+.works-box p {
+    background: #032432;
+    margin: 0;
+}
+
+.works-box img:hover {
+    opacity: 0.5;
+}
+
+.works-title {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    align-items: center;
+}
+
+.works-title ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.title-border {
+    width: 5px;
+    height: 40px;
+    background-color: #032432;
+}
+
+.works-title li:first-child {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+/* -----------------WORKS MOREのページ----------------- */
+
+.main-image {
+    margin: 65px 0 45px 0;
+}
+
+.works-more li:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.works-more li:last-child {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.works-more-title {
+    margin-bottom: 20px;
+}
+
+.works-info {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 100px;
+}
+
+.works-more-bottom {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.wmb-left {
+    padding-right: 55px;
+    width: 60.3%;
+}
+
+.wmb-right {
+    width: 39.7%;
+}
+
+
+
+
+/* -----------------ABOUTのページ----------------- */
+
+.step-about {
+    position: absolute;
+    top: -5px;
+    left: -70px;
+}
+
+.step-about img {
+    width: 350px;
+}
+
+.about-top {
+    font-size: 14px;
+}
+
+.about-top p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+.about-bottom {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 195px;
+}
+
+.pc-about-photo {
+    margin-right: 25px;
+}
+
+.pc-about-photo img {
+    width: 350px;
+}
+
+.about-name img {
+    width: 400px;
+    padding-bottom: 30px;
+}
+
+.about-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.about-box p {
+    background-color: #b4c2c1;
+}
+
+.about-box p:first-child {
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.about-box p:last-child {
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+/* 自己紹介の横棒 */
+.about-border {
+    /* 要素の両端まで線を引く。100%だとはみ出るので少し減らして98% */
+    width: 98%;
+    border: solid 1px #032432;
+    position: absolute;
+    /* 線を引く位置を要素の真ん中にする */
+    top: 50%;
+    /* 真ん中にしただけだと線の太さでバランスが悪くなるためY軸も調整 */
+    transform: translateY(-50%);
+    /* 線を文字より後ろにする */
+    z-index: -1;
+} 
+
+.human {
+    position: absolute;
+    bottom: -200px;
+    right: 5px;
+    width: 100px;
+}
+
+/* -----------------CONTACTのページ----------------- */
+
+.leaf-contact {
+    position: absolute;
+    top: -45px;
+    left: -50px;
+}
+
+.leaf-contact img {
+    width: 350px;
+}
+
+.contact-top {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-bottom: 27px;
+}
+
+.input-label {
+    padding-top: 23px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    height: 40px;
+    background-color: #d0d9d9;
+    border-style: none;
+}
+
+textarea {
+    height: 300px;
+}
+
+.submit-button {
+    font-size: 16px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+
+/* .submit-button {
+    margin-top: 45px;
+    width: 140px;
+    background-color: #032432;
+} */
+
+.tree {
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+    width: 100px;
+}
+
+
+
+
+/* -----------------thanksのページ----------------- */
+
+.thanks-title {
+    text-align: center;
+}
+
+.thanks-page p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.thanks-3 {
+    text-align: center;
+}
+
+.thanks-page div {
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+
+.tent {
+    position: absolute;
+    bottom: -185px;
+    right: 10px;
+    width: 200px;
+}
+
+
+
+/* =================スマホ画面用の記述================= */
+@media screen and (max-width:767px) {
+
+    /* -----------------共通設定----------------- */
+
+    /* スマホのヘッダー箇所 */
+    /* パソコン用のメニューを非表示にする */
+    .pc-nav,
+    .pc-visual,
+    .service-menu-icon,
+    .contact-page br,
+    .pc-about-photo,
+    .wmb-left{
+        display: none;
+    }
+    
+    .sp-visual {
+        display: block;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 30px;
+    
+        /* ホバーしたら指マークに */
+        cursor: pointer; 
+        /* ホバーしやすいように高さを持たせる */
+        height: 33px;
+        /* 最前面に表示させる */
+        z-index: 9999;
+    }
+    
+    .hamburger span {
+        background: #032432;
+        width: 35px;
+        height: 3px;
+        display: block;
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+        border-radius: 2px;
+    }
+    
+    .hamburger span::before,
+    .hamburger span::after {
+        content: '';
+        background: #032432;
+        width: 35px;
+        height: 3px;
+        border-radius: 2px;
+        display: block;
+        position: absolute;
+        transition: 0.3s;
+    }
+    
+    .hamburger span::before {
+        top: 10px;
+    }
+    
+    .hamburger span::after {
+        bottom: 10px;
+    }
+
+    .sp-nav{
+        height: 100vh;
+        background: rgba(3,36,50,1);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .sp-nav ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .sp-nav ul li {
+        color: #b4c2c1;
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 50px;
+        /* padding: 15px 0; */
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    }
+
+    .sp-nav ul img {
+        width: 200px;
+    }
+
+
+
+
+
+
+
+
+
+
+    h2 {
+        font-size: 30px;
+    }
+    
+
+    footer ul{
+        display: block;
+        padding-top: 85px;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    footer ul li {
+        padding-bottom: 30px;
+        margin: 0 auto;
+    }
+
+
+    /* -----------------indexのページ----------------- */
+
+    .sp-concept {
+        display: block;
+    }
+    
+    .concept p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+    
+    /* サービス箇所 */
+    .service h2 {
+        padding-top: 55px;
+        margin-left: 40px;
+        padding-bottom: 70px;
+    }
+    
+    .leaf {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    
+    .leaf img {
+        width: 150px;
+    }
+
+    .service-design {
+        display: block;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 55px;
+    }
+
+    .service h3 {
+        font-size: 18px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .service-menu {
+        width: 260px;
+    }
+
+    .sp-service-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .service-menu-top {
+        display: block;
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+
+    .service-menu-top ul {
+        display: block;
+    }
+
+    .service li {
+        font-size: 12px;
+        margin-left: 35px;
+    }
+
+    .sp-service-menu-icon {
+        display: block;
+        width: 75px;
+    }
+
+    .service-menu-border {
+        width: 170px;
+    }
+
+    .service-menu-bottom {
+        font-size: 14px;
+        padding: 15px 0 0 0;
+    }
+
+    .service-menu-bottom p {
+        text-align: justify;
+    }
+
+    .service-cording {
+        display: block;
+        padding-left: 40px;
+    }
+
+    /* WORKS箇所 */
+
+
+    .works h2 {
+        padding-top: 55px;
+        margin-left: 40px;
+        padding-bottom: 70px;
+    }
+
+    .step-index {
+        position: absolute;
+        top: 38px;
+        left: 20px;
+    }
+
+    .step-index img {
+        width: 150px;
+    }
+
+    .works-image {
+        display: block;
+        padding-bottom: 110px;
+    }
+
+
+
+
+
+
+    /* -----------------WORKSのページ----------------- */
+
+    .works-block {
+        display: block ;
+        
+    }
+
+    .works-image img {
+        width: 39.1%;
+    }
+
+    /* ホバー用に色をつけていた背景色を元に戻す */
+    .works-box p {
+        background: #b4c2c1;
+    }
+
+
+    /* -----------------WORKS MOREのページ----------------- */
+
+    .works-more {
+        margin-left: 37.5px;
+        margin-right: 37.5px;
+        box-sizing: border-box;
+    }
+
+    .main-image {
+        margin-top: 40px;
+    }
+
+    .wmb-right {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+    /* -----------------CONTACTのページ----------------- */
+    
+    .contact-page h2,
+    .contact-top,
+    .input-field,
+    .input-label {
+        margin-left: 37.5px;
+        margin-right: 37.5px;
+        box-sizing: border-box;
+    }
+
+    .leaf-contact {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+    }
+
+    .leaf-contact img {
+        width: 120px;
+    }
+
+    .tree {
+        position: absolute;
+        bottom: -5px;
+        right: 0px;
+        width: auto;
+        height: 65px;
+    }
+
+
+/* -----------------ABOUTのページ----------------- */
+    .about-page {
+        margin-left: 37.5px;
+        margin-right: 37.5px;
+        box-sizing: border-box;
+    }
+
+    .about-page h2 {
+        padding-bottom: 35px;
+    }
+
+    .step-about {
+        position: absolute;
+        top: 20px;
+        left: -25px;
+    }
+    
+    .step-about img {
+        width: 150px;
+    }
+
+    .about-bottom {
+        display: block;
+    }
+
+    .sp-about-photo {
+        display: block;
+        padding-bottom: 30px;
+    }
+
+    .about-box p:first-child {
+        font-size: 19px;
+    }
+    
+    
+
+/* -----------------thanksのページ----------------- */
+
+    .thanks-page {
+        margin-left: 37.5px;
+        margin-right: 37.5px;
+        box-sizing: border-box;
+    }
+
+    .thanks-page h2 {
+        padding-bottom: 35px;
+    }
+
+    .thanks-page div {
+        margin-top: 35px;
+        margin-bottom: 150px;
+    }
+
+    .tent {
+        position: absolute;
+        bottom: -175px;
+        right: 10px;
+        width: 150px;
+    } 
+
+
+
+    }
+    
+    
+    
+    
+
+
