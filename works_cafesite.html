@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <meta name="description" content="ポートフォリオサイト">
+
+    <!-- slickのcss -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 
 <body>
@@ -22,6 +31,24 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
+
+            <div class="hamburger"><span></span></div>
+
+            <nav class="sp-nav">
+                <ul>
+                    <li><a href="index.html"><img src="image/logo_sp-nav.png" alt="ハンバーガーメニューのロゴ">
+                        </a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li>
+                        <p class="icon_instagram">
+                            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+                        </p>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
     </header>
 
@@ -64,4 +91,24 @@
     </footer>
 
 
+    <script>
+        $(function () {
+
+            // ハンバーガーメニュー
+            $('.hamburger').on('click', function () {
+                $('.sp-nav').fadeToggle();
+                $('.hamburger').toggleClass('open');
+            });
+
+
+            // スライダー
+            $('.slider').slick({
+                dots: true,
+                // autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false
+            });
+        });
+
+    </script>
 </body>
