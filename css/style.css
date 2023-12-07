@@ -67,7 +67,7 @@ img {
 }
 
 .main-index {
-    max-width: 1366px;
+    /* max-width: 1366px; */
     margin: 0 auto;
 
 }
@@ -186,7 +186,8 @@ footer p {
 .sp-visual,
 .sp-concept,
 .sp-service-menu-icon,
-.sp-about-photo {
+.sp-about-photo,
+.slider {
     display: none;
 }
 /* ============================================== */
@@ -246,6 +247,52 @@ footer p {
     text-align: center;
 }
 
+/* ホバー時のラインアニメーション */
+.gnavi li a {
+    /* 線の基点とするためrelativeを指定 */
+    position: relative;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover {
+    color: #032432;
+}
+
+.gnavi li a::after {
+    content:"";
+    /* 絶対配置で線の位置を決める */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* 線の形状 */
+    width: 100%;
+    height: 2px;
+    background: #032432;
+    /* アニメーションの指定 */
+    transition: all .3s;
+    transform: scale(0,1); /*X方向０、Y方向１*/
+    transform-origin: left top; /* 左上基点 */
+}
+
+/* 現在地とhoverの設定 */
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+    /* X方向にスケール拡大 */
+    transform: scale(1,1);
+}
+
+.footer-gnavi li.current a,
+.footer-gnavi li a:hover {
+    color:#b4c2c1;
+}
+
+.footer-gnavi li a::after {
+    background: #b4c2c1;
+
+}
+
+
+
 /* コンセプト箇所 */
 .concept {
     text-align: center;
@@ -266,7 +313,6 @@ footer p {
 /* サービス箇所 */
 .service-back {
     background: #b4c2c1;
-    width: 100%;
     margin: 0 0 155px 13.4%;
     border-top-left-radius: 35px;
     border-bottom-left-radius: 35px;
@@ -275,7 +321,7 @@ footer p {
 
 .service h2 {
     padding-top: 140px;
-    margin-left: 125px;
+    margin-left: 10.6%;
 }
 
 .leaf {
@@ -291,19 +337,20 @@ footer p {
 .service-design {
     display: flex;
     padding-top: 40px;
-    padding-left: 22.3%;
+    padding-left: 20.2%;
     padding-bottom: 100px;
+    margin-right: 13.3%;
 }
 
 .service-menu {
-    width: 475px;
+    width: 100%;
 }
 
 .service-menu-top {
     display: flex;
     align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 3%;
+    padding-right: 3%;
     padding-bottom: 20px;
 }
 
@@ -319,15 +366,15 @@ footer p {
 
 .service-menu-border {
     border: solid #032432 1px;
-    width: 475px;
 }
 
 .service-menu-bottom {
-    padding: 20px 40px 0 40px;
+    padding: 20px 3% 0 3%;
 }
 
 .service-menu-bottom p {
     line-height: 1.5;
+    text-align: justify;
 }
 
 .service-menu-icon {
@@ -337,13 +384,13 @@ footer p {
 
 .service-menu-icon img {
     margin-right: 13.4%;
-    /* padding-right: 13.4%; */
 }
 
 .service-cording {
     display: flex;
-    padding-left: 22.3%;
+    padding-left: 20.2%;
     padding-bottom: 75px;
+    margin-right: 13.3%;
 }
 
 .service li {
@@ -366,7 +413,18 @@ footer p {
     padding-left: 20px;
 }
 
+
 /* ワークス箇所 */
+
+.reindeer {
+    position: absolute;
+    top: -132px;
+    left: 2%;
+    width: 100px;
+}
+
+
+
 .works-back {
     background: #b4c2c1;
     width: 86.6%;
@@ -379,7 +437,7 @@ footer p {
 
 .works h2 {
     padding-top: 140px;
-    margin-left: 125px;
+    margin-left: 15.6%;
 }
 
 .step-index {
@@ -395,26 +453,27 @@ footer p {
 .works-wrap {
     /* width: 900px;
     margin-left: 183px; */
-    width: 76.0%;
-    margin-left: 15.5%;
+    /* width: 76.0%; */
+    width: 70%;
+    margin: 0 auto;
 }
 
 .works-image {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 110px;
+    padding-bottom: 80px;
 }
 
-.works-image img {
+/* .works-image img {
     width: 420px;
-}
+} */
 
 .works-image p {
     margin: 0;
 }
 
 .works-index-left {
-    padding-right: 15px;
+    padding-right: 5%;
 }
 
 .works-in {
@@ -423,7 +482,7 @@ footer p {
 
 .deer {
     position: absolute;
-    bottom: -25px;
+    bottom: -5px;
     right: 45px;
     width: 100px;
 }
@@ -440,6 +499,11 @@ footer p {
 
 /* -----------------WORKSのページ----------------- */
 
+
+.works-page {
+    padding: 0 20px;
+}
+
 .works-page h2 {
     margin-left: 120px;
 }
@@ -449,15 +513,39 @@ footer p {
     justify-content: space-between;
 }
 
-/* ホバー時に色をつけるために画像の裏に背景色を設定 */
+/* ホバー時に色をつけるために画像の裏に背景色を設定
 .works-box p {
     background: #032432;
     margin: 0;
+} */
+
+.works-box-left {
+    margin-right: 10%;
 }
 
-.works-box img:hover {
+
+/* .works-box img:hover {
     opacity: 0.5;
-}
+} */
+
+
+
+.works-box-img {
+    cursor: pointer;
+    max-width: 500px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .works-box-img img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .works-box-img:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }
+
+
+
 
 .works-title {
     display: flex;
@@ -497,6 +585,10 @@ footer p {
     margin: 65px 0 45px 0;
 }
 
+.works-more {
+    padding: 0 20px;
+}
+
 .works-more li:first-child {
     font-weight: bold;
     font-size: 20px;
@@ -525,12 +617,16 @@ footer p {
 }
 
 .wmb-left {
-    padding-right: 55px;
+    padding-right: 5%;
     width: 60.3%;
 }
 
 .wmb-right {
     width: 39.7%;
+}
+
+.works-more-banner {
+    padding-bottom: 100px;
 }
 
 
@@ -586,24 +682,33 @@ footer p {
     margin-bottom: 30px;
 }
 
+.about-left {
+    padding-right: 15px;
+    background-color: #b4c2c1;
+}
+
+
 .about-box p {
     background-color: #b4c2c1;
 }
 
 .about-box p:first-child {
     font-weight: bold;
-    padding-right: 15px;
 }
 
-.about-box p:last-child {
-    font-size: 12px;
+.about-right {
+    font-size: 14px;
     padding-left: 15px;
+}
+
+.under {
+    font-size: 12px;
 }
 
 /* 自己紹介の横棒 */
 .about-border {
     /* 要素の両端まで線を引く。100%だとはみ出るので少し減らして98% */
-    width: 98%;
+    width: 90%;
     border: solid 1px #032432;
     position: absolute;
     /* 線を引く位置を要素の真ん中にする */
@@ -659,23 +764,23 @@ textarea {
 }
 
 .submit-button {
-    font-size: 16px;
-    margin: 0 auto;
-    margin-bottom: 200px;
+    margin: 45px auto 200px auto;
 }
 
-/* .submit-button {
-    margin-top: 45px;
-    width: 140px;
-    background-color: #032432;
-} */
+.submit-button p input {
+    display: block;
+    font-size: 14px;
+}
 
 .tree {
     position: absolute;
-    bottom: -5px;
+    bottom: -205px;
     right: 0px;
     width: 100px;
+
 }
+
+
 
 
 
@@ -719,6 +824,8 @@ textarea {
     .pc-nav,
     .pc-visual,
     .service-menu-icon,
+    .service-menu-border,
+    .works-image,
     .contact-page br,
     .pc-about-photo,
     .wmb-left{
@@ -785,6 +892,7 @@ textarea {
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1000;
     }
 
     .sp-nav ul {
@@ -808,13 +916,22 @@ textarea {
         width: 200px;
     }
 
+    .open span {
+        background: transparent;
+    } 
 
+    .open span::before {
+        top: 0px;
+        transform: rotate(45deg);
+        background: #b4c2c1;
+    
+    }
 
-
-
-
-
-
+    .open span::after {
+        bottom: 0px;
+        transform: rotate(135deg);
+        background: #b4c2c1;
+    }
 
 
     h2 {
@@ -848,16 +965,21 @@ textarea {
     }
     
     /* サービス箇所 */
+
+    .service-back {
+        margin: 0 0 155px 10%;
+    }
+
     .service h2 {
         padding-top: 55px;
-        margin-left: 40px;
+        margin-left: 10%;
         padding-bottom: 70px;
     }
     
     .leaf {
         position: absolute;
         top: 25px;
-        left: 25px;
+        left: 7%;
     }
     
     .leaf img {
@@ -867,8 +989,9 @@ textarea {
     .service-design {
         display: block;
         padding-top: 0;
-        padding-left: 40px;
+        padding-left: 10%;
         padding-bottom: 55px;
+        margin-right: 10%;
     }
 
     .service h3 {
@@ -877,9 +1000,6 @@ textarea {
         padding-bottom: 10px;
     }
 
-    .service-menu {
-        width: 260px;
-    }
 
     .sp-service-menu {
         display: flex;
@@ -890,6 +1010,7 @@ textarea {
         display: block;
         padding-left: 0;
         padding-bottom: 10px;
+        width: 100%;
     }
 
     .service-menu-top ul {
@@ -906,13 +1027,15 @@ textarea {
         width: 75px;
     }
 
-    .service-menu-border {
-        width: 170px;
+    .sp-border {
+        width: 100%;
+        margin-top: 10px;
+        border: solid #032432 1px;
     }
 
     .service-menu-bottom {
         font-size: 14px;
-        padding: 15px 0 0 0;
+        padding: 0;
     }
 
     .service-menu-bottom p {
@@ -921,16 +1044,20 @@ textarea {
 
     .service-cording {
         display: block;
-        padding-left: 40px;
+        padding-left: 10%;
+        margin-right: 10%;
+    }
+
+    .reindeer {
+        width: 50px;
+        top: -66px
     }
 
     /* WORKS箇所 */
-
-
     .works h2 {
-        padding-top: 55px;
-        margin-left: 40px;
-        padding-bottom: 70px;
+        padding-top: 65px;
+        margin-left: 12.5%;
+        padding-bottom: 45px;
     }
 
     .step-index {
@@ -943,11 +1070,47 @@ textarea {
         width: 150px;
     }
 
-    .works-image {
-        display: block;
-        padding-bottom: 110px;
+    .works-wrap {
+        margin: 0 auto;
     }
 
+    .slider {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    /* .slick-prev,
+    .slick-next {
+        position: absolute;
+        top: 42%;
+        border-top: 2px solid #b4c2c1;
+
+    } */
+
+    .slick-prev {
+        left: -12%;
+    }
+
+    .slick-next {
+        left : 104%;
+    }
+
+    .slick-prev:before, 
+    .slick-next:before {
+        color: #032432;
+        opacity: 100;
+        font-size: 5vw;
+    }
+
+    .works-wrap div.button-navy {
+        margin-top: 60px;
+    }
+
+    .deer {
+        bottom: -1px;
+        right: 6%;
+        width: 50px;
+    }
 
 
 
@@ -955,13 +1118,18 @@ textarea {
 
     /* -----------------WORKSのページ----------------- */
 
+    .works-page {
+        margin-left: 37.5px;
+        margin-right: 37.5px;
+        box-sizing: border-box;
+    }
+    
     .works-block {
         display: block ;
-        
     }
 
     .works-image img {
-        width: 39.1%;
+        width: 100%;
     }
 
     /* ホバー用に色をつけていた背景色を元に戻す */
@@ -1019,8 +1187,8 @@ textarea {
         position: absolute;
         bottom: -5px;
         right: 0px;
-        width: auto;
-        height: 65px;
+        /* width: auto;
+        height: 65px; */
     }
 
 

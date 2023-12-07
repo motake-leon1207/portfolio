@@ -8,7 +8,7 @@
     <meta name="description" content="ポートフォリオサイト">
 
     <!-- slickのcss -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
@@ -22,11 +22,11 @@
     <header>
         <div class="header-wrap">
             <h1 class="logo">
-                <a href="index.html"><img src="image/logo_other.png" alt="ロゴ"></a>
+                <a href="index.html"><img src="image/logo_other.png" alt="MOTAKE DESIGN"></a>
             </h1>
 
             <nav class="pc-nav">
-                <ul>
+                <ul class="gnavi">
                     <li><a href="works.html">WORKS</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
@@ -44,7 +44,8 @@
                     <li><a href="contact.html">CONTACT</a></li>
                     <li>
                         <p class="icon_instagram">
-                            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+                            <a href="https://www.instagram.com/motake_photo/"><img src="image/icon_instagram.png"
+                                    alt="インスタのアイコン"></a>
                         </p>
                     </li>
                 </ul>
@@ -73,47 +74,43 @@
                     <label for="name">NAME | お名前</label>
                 </p>
                 <div class="input-field">
-                    <input type="text" name="entry.1570990299">
+                    <input id="name" type="text" name="entry.1570990299">
                 </div>
             </div>
 
             <div>
                 <p class="input-label">
-                    <label for="">PHONE | 電話番号</label>
+                    <label for="tel">PHONE | 電話番号</label>
                 </p>
                 <p class="input-field">
-                    <input type="tel" name="entry.160239255">
+                    <input id="tel" type="tel" name="entry.160239255">
                 </p>
             </div>
 
             <div>
                 <p class="input-label">
-                    <label for="">E-MAIL | メールアドレス</label>
+                    <label for="email">E-MAIL | メールアドレス</label>
                 </p>
                 <p class="input-field">
-                    <input type="email" name="entry.2118919136">
+                    <input id="email" type="email" name="entry.2118919136">
                 </p>
             </div>
 
             <div>
                 <p class="input-label">
-                    <label for="">MESSAGE | お問い合わせ内容</label>
+                    <label for="message">MESSAGE | お問い合わせ内容</label>
                 </p>
                 <p class="input-field">
-                    <textarea name="entry.882416498" id="" cols="30" rows="10"></textarea>
+                    <textarea id="message" name="entry.882416498" cols="30" rows="10"></textarea>
                 </p>
             </div>
 
             <div class="submit-button">
-                <!-- <p> -->
-                <input class="button-navy" type="submit" value="SEND MESSAGE">
-                <!-- </p> -->
+                <p>
+                    <input class="button-navy" type="submit" value="SEND MESSAGE">
+                </p>
             </div>
 
-
-            <div class="button-navy">
-                <a href="thanks.html">SEND MESSAGE</a>
-            </div>
 
         </form>
 
@@ -124,7 +121,7 @@
 
     <footer>
         <div class="footer-menu">
-            <ul>
+            <ul class="gnavi footer-gnavi">
                 <li><a href="works.html">WORKS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -132,7 +129,7 @@
         </div>
 
         <p class="icon_instagram">
-            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+            <a href="https://www.instagram.com/motake_photo/"><img src="image/icon_instagram.png" alt="インスタのアイコン"></a>
         </p>
 
         <p class="copy">©︎ MOTAKE DESIGN</p>
@@ -187,26 +184,8 @@
         onload="if(submitted)  {window.location='thanks.html';}"></iframe>
 
 
-    <script>
-        $(function () {
+    <script src="js/script.js"></script>
 
-            // ハンバーガーメニュー
-            $('.hamburger').on('click', function () {
-                $('.sp-nav').fadeToggle();
-                $('.hamburger').toggleClass('open');
-            });
-
-
-            // スライダー
-            $('.slider').slick({
-                dots: true,
-                // autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false
-            });
-        });
-
-    </script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
     <meta name="description" content="ポートフォリオサイト">
 
     <!-- slickのcss -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
@@ -22,10 +22,10 @@
     <header>
         <div class="header-wrap">
             <h1 class="logo">
-                <a href="index.html"><img src="image/logo_other.png" alt="ロゴ"></a>
+                <a href="index.html"><img src="image/logo_other.png" alt="MOTAKE DESIGN"></a>
             </h1>
             <nav class="pc-nav">
-                <ul>
+                <ul class="gnavi">
                     <li><a href="works.html">WORKS</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
@@ -42,7 +42,8 @@
                     <li><a href="contact.html">CONTACT</a></li>
                     <li>
                         <p class="icon_instagram">
-                            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+                            <a href="https://www.instagram.com/motake_photo/"><img src="image/icon_instagram.png"
+                                    alt="インスタのアイコン"></a>
                         </p>
                     </li>
                 </ul>
@@ -91,31 +92,39 @@
                 </div>
 
                 <div class="about-box">
-                    <P>BIRTH</P>
+                    <div class="about-left">
+                        <P>BIRTH</P>
+                        <p class="under">出身</p>
+                    </div>
                     <div class="about-border"></div>
-                    <!-- <P>出身</P> -->
-                    <p>大阪府枚方市</p>
+                    <p class="about-right">大阪府枚方市</p>
                 </div>
 
                 <div class="about-box">
-                    <p>LIVE</p>
+                    <div class="about-left">
+                        <p>LIVE</p>
+                        <p class="under">住処</p>
+                    </div>
                     <div class="about-border"></div>
-                    <!-- <p>住処</p> -->
-                    <p>名古屋</p>
+                    <p class="about-right">名古屋</p>
                 </div>
 
                 <div class="about-box">
-                    <p>HOBBY</p>
+                    <div class="about-left">
+                        <p>HOBBY</p>
+                        <p class="under">趣味</p>
+                    </div>
                     <div class="about-border"></div>
-                    <!-- <p>趣味</p> -->
-                    <p>登山 キャンプ カメラ</p>
+                    <p class="about-right">登山 キャンプ カメラ</p>
                 </div>
 
                 <div class="about-box">
-                    <p>WORD</p>
+                    <div class="about-left">
+                        <p>WORD</p>
+                        <p class="under">好きな言葉</p>
+                    </div>
                     <div class="about-border"></div>
-                    <!-- <p>好きな言葉</p> -->
-                    <p>いつか死ぬ、生きたいように生きろ</p>
+                    <p class="about-right">いつか死ぬ、生きたいように生きろ</p>
                 </div>
             </div>
         </div>
@@ -125,7 +134,7 @@
     <footer>
 
         <div class="footer-menu">
-            <ul>
+            <ul class="gnavi footer-gnavi">
                 <li><a href="works.html">WORKS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -133,33 +142,14 @@
         </div>
 
         <p class="icon_instagram">
-            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+            <a href="https://www.instagram.com/motake_photo/"><img src="image/icon_instagram.png" alt="インスタのアイコン"></a>
         </p>
 
         <p class="copy">©︎ MOTAKE DESIGN</p>
 
     </footer>
 
-    <script>
-        $(function () {
-
-            // ハンバーガーメニュー
-            $('.hamburger').on('click', function () {
-                $('.sp-nav').fadeToggle();
-                $('.hamburger').toggleClass('open');
-            });
-
-
-            // スライダー
-            $('.slider').slick({
-                dots: true,
-                // autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false
-            });
-        });
-
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 

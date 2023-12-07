@@ -8,7 +8,7 @@
     <meta name="description" content="ポートフォリオサイト">
 
     <!-- slickのcss -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
@@ -22,10 +22,10 @@
     <header>
         <div class="header-wrap">
             <h1 class="logo">
-                <a href="index.html"><img src="image/logo_other.png" alt="ロゴ"></a>
+                <a href="index.html"><img src="image/logo_other.png" alt="MOTAKE DESIGN"></a>
             </h1>
             <nav class="pc-nav">
-                <ul>
+                <ul class="gnavi">
                     <li><a href="works.html">WORKS</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
@@ -43,7 +43,8 @@
                     <li><a href="contact.html">CONTACT</a></li>
                     <li>
                         <p class="icon_instagram">
-                            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+                            <a href="https://www.instagram.com/motake_photo/"><img src="image/icon_instagram.png"
+                                    alt="インスタのアイコン"></a>
                         </p>
                     </li>
                 </ul>
@@ -75,7 +76,7 @@
     <footer>
 
         <div class="footer-menu">
-            <ul>
+            <ul class="gnavi footer-gnavi">
                 <li><a href="works.html">WORKS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -83,7 +84,7 @@
         </div>
 
         <p class="icon_instagram">
-            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+            <a href="https://www.instagram.com/motake_photo/"><img src="image/icon_instagram.png" alt="インスタのアイコン"></a>
         </p>
 
         <p class="copy">©︎ MOTAKE DESIGN</p>
@@ -91,24 +92,7 @@
     </footer>
 
 
-    <script>
-        $(function () {
-
-            // ハンバーガーメニュー
-            $('.hamburger').on('click', function () {
-                $('.sp-nav').fadeToggle();
-                $('.hamburger').toggleClass('open');
-            });
+    <script src="js/script.js"></script>
 
 
-            // スライダー
-            $('.slider').slick({
-                dots: true,
-                // autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false
-            });
-        });
-
-    </script>
 </body>

@@ -8,54 +8,90 @@
     <meta name="description" content="ポートフォリオサイト">
 
     <!-- slickのcss -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
+
+
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- ローディングのcss -->
+    <link rel="stylesheet" href="text/css" href="css/loading.css">
+
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- slickのスクリプトはjクエリの後に記述する（jクエリのコードのため） - -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
 
 </head>
 
 <body class="body-index">
+
+    <!-- ローディング -->
+
+
+
+    <!-- 
     <header class="header-index">
-        <div>
-            <img class="pc-visual" src="image/main_visual.png" alt="スマホ用のメインビジュアル">
-            <img class="sp-visual" src="image/main_visual_sp.png" alt="スマホ用のメインビジュアル">
+        <div id="splash">
+            <div id="splash_text"></div>
+            <div class="loader_cover loader_cover-up"></div>
+            <div class="loader_cover loader_cover-down"></div>
         </div>
 
-        <div class="header-wrap-index">
-            <h1 class="logo">
-                <img src="image/logo_index.png" alt="ロゴ">
-            </h1>
-            <nav class="pc-nav">
-                <ul>
-                    <li><a href="works.html">WORKS</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
+        <div id="container">
+            <p>ローディング後この画面が見えます。 </p>
+        </div> -->
 
-            <div class="hamburger"><span></span></div>
+    <div>
+        <img class="pc-visual" src="image/main_visual.png" alt="スマホ用のメインビジュアル">
+        <img class="sp-visual" src="image/main_visual_sp.png" alt="スマホ用のメインビジュアル">
+    </div>
 
-            <nav class="sp-nav">
-                <ul>
-                    <li><a href="index.html"><img src="image/logo_sp-nav.png" alt="ハンバーガーメニューのロゴ">
-                        </a></li>
-                    <li><a href="works.html">WORKS</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li>
-                        <p class="icon_instagram">
-                            <img src="image/icon_instagram.png" alt="インスタのアイコン">
-                        </p>
-                    </li>
-                </ul>
-            </nav>
+    <div class="header-wrap-index">
+        <h1 class="logo">
+            <img src="image/logo_index.png" alt="MOTAKE DESIGN">
+        </h1>
+        <nav class="pc-nav">
+            <ul class="gnavi">
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
 
-        </div>
+        <div class="hamburger"><span></span></div>
+
+        <nav class="sp-nav">
+            <ul>
+                <li><a href="index.html"><img src="image/logo_sp-nav.png" alt="ハンバーガーメニューのロゴ">
+                    </a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li>
+                    <p class="icon_instagram">
+                        <a href="https://www.instagram.com/motake_photo/"><img src="image/icon_instagram.png"
+                                alt="インスタのアイコン"></a>
+                    </p>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
     </header>
+
+
+
+
+
+
+
 
     <main class="main-index">
         <section class="concept">
@@ -82,6 +118,7 @@
                                         <li>photoshop</li>
                                     </ul>
                                 </div>
+                                <div class="sp-border"></div>
                             </div>
 
                             <div class="sp-service-menu-icon">
@@ -115,6 +152,7 @@
                                         <li>Javascript / jQuery</li>
                                     </ul>
                                 </div>
+                                <div class="sp-border"></div>
                             </div>
 
                             <div class="sp-service-menu-icon">
@@ -135,11 +173,19 @@
                     </div>
                 </div>
 
+                <!-- <p class="reindeer">
+                    <img src="image/illust_reindeer.png" alt="シカのイラスト">
+                </p> -->
+
             </div>
         </section>
 
         <section class="works">
             <div class="works-back">
+
+                <p class="reindeer">
+                    <img src="image/illust_reindeer.png" alt="シカのイラスト">
+                </p>
 
                 <h2>WORKS</h2>
                 <p class="step-index">
@@ -149,31 +195,31 @@
                 <div class="works-wrap">
                     <div class="works-image">
                         <p class="works-index-left"><img src="image/works_cafesite_small.png" alt="カフェサイト"></p>
-                        <p class="works-index-right"><img src="image/works_hairsalonsite_small.png" alt="ヘアサロンサイト"></p>
+                        <p class="works-index-right"><img src="image/works_hairsalonsite_small.png" alt="ヘアサロンサイト">
+                        </p>
                     </div>
+
+                    <div class="slider">
+                        <p>
+                            <picture>
+                                <source srcset="image/works_cafesite_small.png" media="(max-width: 767px)">
+                                <img src="images/pc_first-100.jpg" alt="デザインカフェ　店内の様子">
+                            </picture>
+                        </p>
+
+                        <p>
+                            <picture>
+                                <source srcset="image/works_hairsalonsite_small.png" media="(max-width: 767px)">
+                                <img src="images/slider_2.jpg" alt="デザインカフェ　店内の様子2">
+                            </picture>
+                        </p>
+
+                    </div>
+
                     <div class="button-navy">
                         <a href="works.html">MORE WORKS</a>
                     </div>
                 </div>
-
-                <div class="slider">
-                    <p>
-                        <picture>
-                            <source srcset="image/works_cafesite_small.png" media="(max-width: 767px)">
-                            <!-- <img src="images/pc_first-100.jpg" alt="デザインカフェ　店内の様子"> -->
-                        </picture>
-                    </p>
-
-                    <p>
-                        <picture>
-                            <source srcset="image/works_hairsalonsite_small.png" media="(max-width: 767px)">
-                            <!-- <img src="images/slider_2.jpg" alt="デザインカフェ　店内の様子2"> -->
-                        </picture>
-                    </p>
-
-                </div>
-
-
 
 
 
@@ -181,15 +227,22 @@
                     <img src="image/illust_deer.png" alt="シカのイラスト">
                 </p>
                 <div class="space"></div>
+
             </div>
         </section>
 
+
+
+
+
     </main>
+
+
 
     <footer>
 
         <div class="footer-menu">
-            <ul>
+            <ul class="gnavi footer-gnavi">
                 <li><a href="works.html">WORKS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -197,33 +250,20 @@
         </div>
 
         <p class="icon_instagram">
-            <img src="image/icon_instagram.png" alt="インスタのアイコン">
+            <a href="https://www.instagram.com/motake_photo/"><img src="image/icon_instagram.png" alt="インスタのアイコン"></a>
         </p>
 
         <p class="copy">©︎ MOTAKE DESIGN</p>
 
     </footer>
 
-    <script>
-        $(function () {
+    <script src="js/script.js"></script>
 
-            // ハンバーガーメニュー
-            $('.hamburger').on('click', function () {
-                $('.sp-nav').fadeToggle();
-                $('.hamburger').toggleClass('open');
-            });
-
-
-            // スライダー
-            $('.slider').slick({
-                dots: true,
-                // autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: false
-            });
-        });
-
-    </script>
+    <!-- ProgressBarのスクリプト -->
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <!--IE11用※対応しなければ削除してください-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
 
 </body>
 
