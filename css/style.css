@@ -84,13 +84,13 @@ img {
     position: relative;
 }
 
-.step-other {
+.step-works {
     position: absolute;
     top: -5px;
     left: 65px;
 }
 
-.step-other img {
+.step-works img {
     width: 350px;
 }
 
@@ -536,11 +536,11 @@ footer p {
     overflow: hidden;
     width: 100%;
   }
-  .works-box-img img {
+.works-box-img img {
     height: auto;
     transition: transform .6s ease; /* ゆっくり変化させる */
   }
-  .works-box-img:hover img {
+.works-box-img:hover img {
     transform: scale(1.1); /* 拡大 */
   }
 
@@ -559,6 +559,10 @@ footer p {
     padding-left: 15px;
 }
 
+.works-title ul li {
+    line-height: 1.5;
+}
+
 .title-border {
     width: 5px;
     height: 40px;
@@ -572,7 +576,9 @@ footer p {
 }
 
 
-
+.coming-soon img{
+    cursor: auto;
+}
 
 
 
@@ -616,12 +622,12 @@ footer p {
     margin-bottom: 50px;
 }
 
-.wmb-left {
+.works-more-pc {
     padding-right: 5%;
     width: 60.3%;
 }
 
-.wmb-right {
+.works-more-sp {
     width: 39.7%;
 }
 
@@ -828,7 +834,7 @@ textarea {
     .works-image,
     .contact-page br,
     .pc-about-photo,
-    .wmb-left{
+    .works-more-pc{
         display: none;
     }
     
@@ -949,6 +955,12 @@ textarea {
     footer ul li {
         padding-bottom: 30px;
         margin: 0 auto;
+    }
+
+    .button-navy,
+    .button-gray {
+        width: 107px;
+        font-size: 12px;
     }
 
 
@@ -1079,14 +1091,6 @@ textarea {
         margin-bottom: 50px;
     }
 
-    /* .slick-prev,
-    .slick-next {
-        position: absolute;
-        top: 42%;
-        border-top: 2px solid #b4c2c1;
-
-    } */
-
     .slick-prev {
         left: -12%;
     }
@@ -1123,6 +1127,21 @@ textarea {
         margin-right: 37.5px;
         box-sizing: border-box;
     }
+
+    .works-page h2 {
+        padding-bottom: 35px;
+        margin-left: 0;
+    }
+
+    .step-works {
+        position: absolute;
+        top: 20px;
+        left: -1px;
+    }
+    
+    .step-works img {
+        width: 150px;
+    }
     
     .works-block {
         display: block ;
@@ -1135,6 +1154,27 @@ textarea {
     /* ホバー用に色をつけていた背景色を元に戻す */
     .works-box p {
         background: #b4c2c1;
+    }
+
+    .works-box-img {
+        max-width: none;
+    }
+
+    .works-box-left {
+        margin-right: 0;
+    }
+
+    .works-title {
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .works-title ul li:first-child {
+        font-size: 14px;
+    }
+
+    .works-title ul li:last-child {
+        font-size: 12px;
     }
 
 
@@ -1150,9 +1190,20 @@ textarea {
         margin-top: 40px;
     }
 
-    .wmb-right {
+    .works-more-sp img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .works-more-bottom {
+        display: block;
+    }
+
+    .works-more-sp {
         width: 100%;
     }
+
+    
 
 
 
@@ -1185,10 +1236,14 @@ textarea {
 
     .tree {
         position: absolute;
-        bottom: -5px;
+        /* bottom: -5px; */
         right: 0px;
         /* width: auto;
         height: 65px; */
+    }
+
+    .submit-button p input {
+        font-size: 12px;
     }
 
 
@@ -1211,6 +1266,12 @@ textarea {
     
     .step-about img {
         width: 150px;
+    }
+
+    .about-name img{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .about-bottom {
