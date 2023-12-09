@@ -30,11 +30,11 @@ ul,
 li,
 a,
 .input-label {
-    font-family: "DIN 2014";
+    font-family: "DIN 2014",'Oswald', sans-serif;
 }
 
 a:hover {
-    opacity: 0.5;
+    /* opacity: 0.5; */
     transition: 0.3s;
 }
 
@@ -97,8 +97,22 @@ img {
 body {
     background: #b4c2c1;
     margin: 0;
+     /* フェードインの設定 */
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
 }
 
+    /* ページ全体をフェードインさせる */
+    @keyframes fadeIn {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
+     
+    @-webkit-keyframes fadeIn {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
+    
 
 /* ボタン箇所 */
 .button-gray {
@@ -115,7 +129,7 @@ body {
 .button-gray:hover {
     color: #032432;
     background-color: #b4c2c1;
-    transition: 0.3s;
+    transition: 0.5s;
     cursor: pointer;
     opacity: 0.5;
 }
@@ -136,7 +150,7 @@ body {
 .button-navy:hover {
     color: #032432;
     background-color: #b4c2c1;
-    transition: 0.3s;
+    transition: 0.5s;
     cursor: pointer;
     opacity: 0.5;
 }
@@ -170,6 +184,13 @@ footer p {
 .icon_instagram {
     width: 40px;
     margin: 0 auto;
+}
+
+.logo:hover, 
+.icon_instagram:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
 }
 
 .copy {
@@ -462,6 +483,17 @@ footer p {
     display: flex;
     justify-content: space-between;
     padding-bottom: 80px;
+
+  }
+
+.works-image img {
+    cursor: pointer;
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+
+.works-image img:hover {
+    transform: scale(1.1); /* 拡大 */
 }
 
 /* .works-image img {
@@ -536,10 +568,14 @@ footer p {
     overflow: hidden;
     width: 100%;
   }
+
+
 .works-box-img img {
     height: auto;
     transition: transform .6s ease; /* ゆっくり変化させる */
   }
+
+
 .works-box-img:hover img {
     transform: scale(1.1); /* 拡大 */
   }
